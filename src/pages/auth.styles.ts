@@ -1,5 +1,73 @@
-﻿import styled from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+export const Page = styled.div`
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+`
+
+export const Frame = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+`
+
+export const Main = styled.main`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+
+  @media (min-width: 768px) {
+    padding: 64px 32px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 64px 48px;
+  }
+`
+
+export const Card = styled.section`
+  width: calc(100% - 40px);
+  max-width: 480px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    width: calc(100% - 64px);
+    padding: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(100% - 80px);
+  }
+`
+
+export const CardHeader = styled.div`
+  margin-bottom: 32px;
+`
+
+export const CardTitle = styled.h2`
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+`
+
+export const CardSubtitle = styled.p`
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+`
 
 export const Form = styled.form`
   display: flex;
@@ -45,7 +113,6 @@ export const RowBetween = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
 `
 
 export const CheckboxContainer = styled.div<{ $alignStart?: boolean }>`
@@ -94,54 +161,6 @@ export const PrimaryButton = styled.button`
   &:hover {
     background: #9bc846;
   }
-`
-
-export const DividerRow = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin: 24px 0;
-`
-
-export const DividerLine = styled.div`
-  flex: 1;
-  height: 1px;
-  background: #e5e7eb;
-`
-
-export const DividerText = styled.span`
-  font-size: 14px;
-  color: #9ca3af;
-  padding: 0 16px;
-`
-
-export const SocialButtonBase = styled.button<{ $withBottomMargin?: boolean }>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  border: 1px solid #fde68a;
-  background: #fefce8;
-  color: #374151;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  margin-bottom: ${({ $withBottomMargin }) => ($withBottomMargin ? '12px' : '0')};
-
-  &:hover {
-    background: #fef3c7;
-  }
-`
-
-export const SocialIcon = styled.span`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
 `
 
 export const BottomText = styled.p`
