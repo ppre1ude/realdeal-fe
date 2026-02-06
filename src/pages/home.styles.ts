@@ -238,7 +238,22 @@ export const Section = styled.section<{ $tone?: 'light' | 'muted' }>`
 
 export const SectionHeader = styled.div`
   text-align: center;
-  margin-bottom: 80px;
+  padding-top: 96px;
+  padding-bottom: 64px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  @media (max-width: 1024px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 64px;
+    padding-bottom: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 `
 
 export const SectionTitle = styled.h2`
@@ -788,4 +803,189 @@ export const FabButton = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+`
+
+// Detailed Process Steps
+export const ProcessSection = styled.section`
+  background: #ffffff;
+`
+
+export const StepBlock = styled.div<{ $reverse?: boolean; $bgColor?: string }>`
+  width: 100%;
+  display: flex;
+  flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : 'row')};
+  align-items: center;
+  padding: 80px;
+  gap: 80px;
+  background: ${({ $bgColor }) => $bgColor || '#ffffff'};
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 64px 40px;
+    gap: 48px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 48px 24px;
+    gap: 32px;
+  }
+`
+
+export const StepContent = styled.div`
+  width: 50%;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`
+
+export const StepIcon = styled.div`
+  width: 64px;
+  height: 64px;
+  background: #add94e;
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 15px -3px rgba(173, 217, 78, 0.2);
+`
+
+export const StepNumber = styled.h3`
+  font-size: 14px;
+  font-weight: 700;
+  color: #8bb535;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+`
+
+export const StepTitle = styled.h2`
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 24px;
+  line-height: 1.2;
+  color: #111827;
+`
+
+export const StepDescription = styled.p`
+  font-size: 20px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 32px;
+`
+
+export const StepFeatureList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+
+export const StepFeatureItem = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #374151;
+  font-weight: 500;
+`
+
+export const StepFeatureIcon = styled.i`
+  color: #add94e;
+`
+
+export const StepFeatureGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+`
+
+export const StepFeatureCard = styled.div`
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 16px;
+  border: 1px solid #f3f4f6;
+`
+
+export const StepFeatureCardIcon = styled.div`
+  color: #add94e;
+  margin-bottom: 8px;
+  font-size: 20px;
+`
+
+export const StepFeatureCardTitle = styled.div`
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+`
+
+export const StepFeatureCardDescription = styled.div`
+  font-size: 14px;
+  color: #6b7280;
+`
+
+export const StepFeatureVerticalList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`
+
+export const StepFeatureVerticalItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+`
+
+export const StepFeatureVerticalIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #add94e;
+  flex-shrink: 0;
+`
+
+export const StepFeatureVerticalContent = styled.div``
+
+export const StepFeatureVerticalTitle = styled.div`
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+`
+
+export const StepFeatureVerticalDescription = styled.div`
+  color: #6b7280;
+`
+
+export const StepImage = styled.div`
+  width: 50%;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`
+
+export const StepImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+`
+
+export const StepImageContent = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
