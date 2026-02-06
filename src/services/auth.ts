@@ -11,10 +11,29 @@ export interface LoginRequest {
   password: string
 }
 
-// API 문서에 응답 구조가 명시되지 않아 유연한 타입 사용
-export type AuthResponse = Record<string, unknown>
+/**
+ * 사용자 정보
+ */
+export interface UserInfo {
+  id: string
+  email: string
+}
 
-export type UserInfo = Record<string, unknown>
+/**
+ * 인증 응답 (signup/login)
+ */
+export interface AuthResponse {
+  accessToken: string
+  refreshToken: string
+  user: UserInfo
+}
+
+/**
+ * 현재 사용자 정보 응답 (/auth/me)
+ */
+export interface CurrentUserResponse {
+  user: UserInfo
+}
 
 /**
  * 회원가입
@@ -43,8 +62,8 @@ export const login = async (data: LoginRequest): Promise<AuthResponse> => {
  * GET /auth/me
  * Response: 200
  */
-export const getCurrentUser = async (): Promise<UserInfo> => {
-  const response = await axiosInstance.get<UserInfo>('/auth/me')
+export const getCurrentUser = async (): Promise<CurrentUserResponse> => {
+  const response = await axiosInstance.get<CurrentUserResponse>('/auth/me')
   return response.data
 }
 
