@@ -179,7 +179,7 @@ export const HeroActions = styled.div`
   gap: 16px;
 `
 
-export const DarkActionButton = styled.button`
+export const DarkActionButton = styled(Link)`
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -191,6 +191,7 @@ export const DarkActionButton = styled.button`
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s ease;
 
   &:hover {

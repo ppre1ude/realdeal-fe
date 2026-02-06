@@ -30,11 +30,11 @@ const Layout = ({ children }: LayoutProps) => {
             <LogoText>알짜배기</LogoText>
           </Logo>
           <Nav>
-            <NavLink to="/resume-edit" $active>
-              AI 이력서 첨삭
+            <NavLink to="/resume-upload" $active>
+              이력서 제출
             </NavLink>
-            <NavAnchor href="/company-recommendation">기업 추천</NavAnchor>
-            <NavAnchor href="/matching-status">매칭 현황</NavAnchor>
+            <NavLink to="/resume-report">이력서 내역</NavLink>
+            <NavAnchor href="/matching-status">기업 추천</NavAnchor>
           </Nav>
         </HeaderLeft>
         <HeaderActions>

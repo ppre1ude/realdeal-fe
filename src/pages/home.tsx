@@ -8,8 +8,6 @@
   CompanyName,
   CompanyRole,
   DarkActionButton,
-  Fab,
-  FabButton,
   HeroActions,
   HeroBadge,
   HeroContent,
@@ -131,7 +129,7 @@ const HomePage = () => (
               당신의 미래를 컨설팅해드릴게요.
             </HeroDescription>
             <HeroActions>
-              <DarkActionButton type="button">
+              <DarkActionButton to="/resume-upload">
                 <i className="fa-solid fa-file-arrow-up" aria-hidden="true" />
                 이력서 업로드하러 가기
               </DarkActionButton>
@@ -323,11 +321,6 @@ const HomePage = () => (
           </CompanyGrid>
         </Section>
 
-        <Fab>
-          <FabButton type="button" aria-label="문의하기">
-            <i className="fa-solid fa-comment-dots" aria-hidden="true" />
-          </FabButton>
-        </Fab>
       </AppShell>
     </Page>
   </>
