@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   ActionButton,
   ActionCard,
@@ -59,7 +60,62 @@ import {
   YearNumber,
 } from './portfolio-diagnosis.styles'
 
+const LOADING_DELAY_MS = 1500 // 1.5초 지연
+
 const PortfolioDiagnosisPage = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // 실제 서버 통신처럼 약간의 지연 시간 추가
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, LOADING_DELAY_MS)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <Page>
+        <Shell>
+          <Main>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '60vh',
+                gap: '24px',
+              }}
+            >
+              <div
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  border: '4px solid rgba(173, 217, 78, 0.2)',
+                  borderTopColor: '#add94e',
+                  borderRadius: '50%',
+                  animation: 'spin 1s linear infinite',
+                }}
+              />
+              <div style={{ color: '#ffffff', fontSize: '18px', fontWeight: 600 }}>
+                포트폴리오 진단 데이터를 불러오는 중...
+              </div>
+              <style>
+                {`
+                  @keyframes spin {
+                    to { transform: rotate(360deg); }
+                  }
+                `}
+              </style>
+            </div>
+          </Main>
+        </Shell>
+      </Page>
+    )
+  }
+
   return (
     <Page>
       <Shell>
