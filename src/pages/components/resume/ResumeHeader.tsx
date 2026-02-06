@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { HeaderContainer, HeaderLeft, HeaderLogo, HeaderLogoIcon, HeaderNav, HeaderNavLink, HeaderRight, HeaderUserInfo, HeaderUserName, HeaderUserPlan, HeaderUserAvatar } from './ResumeHeader.styles'
 
 const ResumeHeader = () => {
