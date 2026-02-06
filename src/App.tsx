@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
+import CompanyRecommendationPage from './pages/company-recommendation'
 import HomePage from './pages/home'
 import LoginPage from './pages/login'
 import RegisterPage from './pages/register'
@@ -11,6 +12,7 @@ const App = () => (
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/company-recommendation" element={<CompanyRecommendationPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/resume-report" element={<ResumeReportPage />} />
