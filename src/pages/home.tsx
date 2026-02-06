@@ -139,7 +139,7 @@ const HomePage = () => (
           </HeroContent>
           <HeroVisual>
             <HeroImage
-              src="https://gmcnqdpighpxhzpesqwf.supabase.co/storage/v1/object/public/generated-images/image-f3ca5f6c-6b3b-4791-bb92-a16c1ebf9d8a.jpg"
+              src="/copy-dynamic-color.svg"
               alt="AI가 이력서를 분석하는 모습을 표현한 3D 일러스트"
             />
           </HeroVisual>
@@ -184,8 +184,8 @@ const HomePage = () => (
             <StepImage>
               <StepImageWrapper>
                 <StepImageContent
-                  src="https://gmcnqdpighpxhzpesqwf.supabase.co/storage/v1/object/public/generated-images/image-b7300d00-8485-488c-908f-d151e1163f76.jpg"
-                  alt="A sleek interface showing a file upload progress bar with high-tech data scanning animations and green glowing accents."
+                  src="/fav-folder-iso-color.svg"
+                  alt="파일 업로드 인터페이스"
                 />
               </StepImageWrapper>
             </StepImage>

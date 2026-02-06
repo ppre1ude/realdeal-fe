@@ -220,15 +220,14 @@ export const HeroVisual = styled.div`
   transform: translateY(-50%);
   width: 700px;
   height: 500px;
-  border-radius: 40px 0 0 40px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: visible;
 `
 
 export const HeroImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: hue-rotate(60deg) saturate(1.2) brightness(0.95) drop-shadow(12px 12px 24px rgba(139, 181, 53, 0.5));
 `
 
 export const Section = styled.section<{ $tone?: 'light' | 'muted' }>`
@@ -979,13 +978,12 @@ export const StepImageWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 480px;
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: visible;
 `
 
 export const StepImageContent = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: hue-rotate(60deg) saturate(1.2) brightness(0.95) drop-shadow(12px 12px 24px rgba(139, 181, 53, 0.5));
 `
