@@ -216,8 +216,8 @@ const HomePage = () => (
                   <StepFeatureCardIcon>
                     <i className="fa-solid fa-pen-nib" />
                   </StepFeatureCardIcon>
-                  <StepFeatureCardTitle>1234</StepFeatureCardTitle>
-                  <StepFeatureCardDescription>5678</StepFeatureCardDescription>
+                  <StepFeatureCardTitle>실시간 진행 상황 추적</StepFeatureCardTitle>
+                  <StepFeatureCardDescription>목표 달성률과 마일스톤 달성 현황을 한눈에 확인</StepFeatureCardDescription>
                 </StepFeatureCard>
               </StepFeatureGrid>
             </StepContent>
