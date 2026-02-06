@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
             <LogoIcon>
               <i className="fa-solid fa-envelope" aria-hidden="true" />
             </LogoIcon>
-            <LogoText>LINKED-INSA</LogoText>
+            <LogoText>알짜배기</LogoText>
           </Logo>
           <Nav>
             <NavLink to="/resume-edit" $active>

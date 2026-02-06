@@ -246,6 +246,14 @@ export const FieldGroup = styled.div`
   gap: 8px;
 `
 
+export const FieldGroupWide = styled(FieldGroup)`
+  grid-column: span 2;
+
+  @media (max-width: 900px) {
+    grid-column: span 1;
+  }
+`
+
 export const FieldLabel = styled.label`
   font-size: 14px;
   font-weight: 700;
@@ -253,14 +261,47 @@ export const FieldLabel = styled.label`
   margin-left: 4px;
 `
 
+export const FieldHint = styled.span`
+  font-size: 12px;
+  color: #94a3b8;
+  margin-left: 4px;
+`
+
 export const TextInput = styled.input`
   width: 100%;
   padding: 16px 20px;
+  box-sizing: border-box;
   border-radius: 16px;
   border: 1px solid #eef2f7;
   background: #f8fafc;
   font-size: 15px;
   color: #1f2937;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  &::placeholder {
+    color: #a1a1aa;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(173, 217, 78, 0.8);
+    box-shadow: 0 0 0 3px rgba(173, 217, 78, 0.2);
+    background: #ffffff;
+  }
+`
+
+export const TextArea = styled.textarea`
+  width: 100%;
+  min-height: 120px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #eef2f7;
+  background: #f8fafc;
+  font-size: 15px;
+  color: #1f2937;
+  line-height: 1.6;
+  resize: vertical;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 
   &::placeholder {
@@ -315,6 +356,7 @@ export const ExperienceButton = styled.button<{ $active?: boolean }>`
 
 export const UploadZone = styled.div`
   width: 100%;
+  box-sizing: border-box;
   border: 2px solid #add94e;
   background: rgba(173, 217, 78, 0.08);
   border-radius: 28px;
@@ -346,6 +388,7 @@ export const FileInput = styled.input`
 export const FileCard = styled.div`
   width: 100%;
   max-width: 720px;
+  box-sizing: border-box;
   background: #ffffff;
   border-radius: 20px;
   border: 1px solid rgba(173, 217, 78, 0.2);
@@ -464,6 +507,7 @@ export const UploadHint = styled.p`
 
 export const UploadEmpty = styled.div`
   width: 100%;
+  box-sizing: border-box;
   border: 2px dashed #e5e7eb;
   border-radius: 28px;
   padding: 56px 32px;

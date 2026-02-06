@@ -981,11 +981,57 @@ export const StepImageWrapper = styled.div`
   width: 100%;
   height: 480px;
   overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 6% 10%;
+    border-radius: 40px;
+    background: radial-gradient(
+      60% 60% at 50% 50%,
+      rgba(173, 217, 78, 0.28) 0%,
+      rgba(173, 217, 78, 0) 70%
+    );
+    filter: blur(6px);
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72%;
+    height: 18%;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(15, 23, 42, 0.18) 0%,
+      rgba(15, 23, 42, 0) 70%
+    );
+    z-index: 0;
+  }
 `
 
-export const StepImageContent = styled.img`
+export const StepImageContent = styled.img<{
+  $shadowTone?: 'green' | 'neutral'
+  $tone?: 'default' | 'match'
+}>`
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: hue-rotate(60deg) saturate(1.2) brightness(0.95) drop-shadow(12px 12px 24px rgba(139, 181, 53, 0.5));
+  filter: ${({ $tone }) =>
+      $tone === 'match'
+        ? 'hue-rotate(105deg) saturate(1.55) brightness(1.08) contrast(0.95)'
+        : 'hue-rotate(50deg) saturate(1.25) brightness(1.01) contrast(1.02)'}
+    drop-shadow(
+      0 20px 28px
+        ${({ $shadowTone }) =>
+          $shadowTone === 'neutral' ? 'rgba(15, 23, 42, 0.22)' : 'rgba(139, 181, 53, 0.35)'}
+    );
 `
