@@ -552,7 +552,7 @@ export const MatchingSubtitle = styled.p`
   font-size: 18px;
 `
 
-export const ViewAllButton = styled.button`
+export const ViewAllButton = styled(Link)`
   border: none;
   background: transparent;
   color: #111827;
@@ -562,6 +562,7 @@ export const ViewAllButton = styled.button`
   gap: 8px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  text-decoration: none;
 
   &:hover {
     transform: translateX(4px);

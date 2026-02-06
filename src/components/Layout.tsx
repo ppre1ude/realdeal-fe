@@ -8,7 +8,6 @@ import {
   LogoIcon,
   LogoText,
   Nav,
-  NavAnchor,
   NavLink,
   PrimaryPillButton,
   TextLinkButton,
@@ -33,8 +32,8 @@ const Layout = ({ children }: LayoutProps) => {
             <NavLink to="/resume-upload" $active>
               이력서 제출
             </NavLink>
-            <NavLink to="/resume-report">이력서 내역</NavLink>
-            <NavAnchor href="/matching-status">기업 추천</NavAnchor>
+            <NavLink to="/company-recommendation">기업 추천</NavLink>
+            <NavLink to="/dashboard">대시보드</NavLink>
           </Nav>
         </HeaderLeft>
         <HeaderActions>

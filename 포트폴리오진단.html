@@ -1,0 +1,285 @@
+<html>
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" crossorigin="anonymous"></script>
+            <style> * { font-family: 'Pretendard', sans-serif; } </style>
+        </head>
+
+        <div id="app" class="relative w-[1440px] min-h-[1024px] bg-[#F8FAFC] text-[#1E293B]">
+  <!-- Header -->
+  <header id="header" class="sticky top-0 z-50 w-full h-[80px] bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between px-10">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-[#ADD94E] rounded-xl flex items-center justify-center text-[#1E293B] text-xl">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <span class="text-xl font-bold tracking-tight">CareerPath AI</span>
+    </div>
+    <nav class="flex items-center gap-8">
+      <a href="#" class="text-[#4A5D18] font-semibold">포트폴리오 진단</a>
+      <a href="#" class="text-slate-500 hover:text-slate-900 transition-colors">로드맵 관리</a>
+      <a href="#" class="text-slate-500 hover:text-slate-900 transition-colors">멘토링 찾기</a>
+      <a href="#" class="text-slate-500 hover:text-slate-900 transition-colors">채용 공고</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <button class="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-slate-600">
+        <i class="fa-regular fa-bell text-xl"></i>
+      </button>
+      <img src="https://vinsign.app/resources/avatars/avatar-2.png" alt="User Avatar" class="w-10 h-10 rounded-full border border-slate-200">
+    </div>
+  </header>
+
+  <main id="content" class="p-10 space-y-8">
+    <!-- Hero Section: Goal & Score -->
+    <section id="hero-summary" class="grid grid-cols-12 gap-6">
+      <div class="col-span-8 bg-white rounded-[32px] p-10 shadow-sm border border-slate-100 flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center px-4 py-1.5 bg-[#F5F9E8] text-[#4A5D18] rounded-full text-sm font-bold mb-6">
+            커리어 목표
+          </div>
+          <h1 class="text-4xl font-extrabold leading-tight mb-4">
+            "3년 안에 <span class="text-[#8CB336]">프론트엔드 리드</span>로 성장"
+          </h1>
+          <p class="text-slate-500 text-lg max-w-2xl leading-relaxed">
+            React/Next.js 기반 프로젝트 3개와 팀 프로젝트 경험이 있으나, 대규모 트래픽/성능 최적화 경험은 부족함.
+          </p>
+        </div>
+        <div class="flex items-center gap-6 mt-10 pt-10 border-t border-slate-100">
+          <div class="flex -space-x-3">
+            <img src="https://vinsign.app/resources/avatars/avatar-1.png" class="w-10 h-10 rounded-full border-2 border-white">
+            <img src="https://vinsign.app/resources/avatars/avatar-3.png" class="w-10 h-10 rounded-full border-2 border-white">
+            <img src="https://vinsign.app/resources/avatars/avatar-5.png" class="w-10 h-10 rounded-full border-2 border-white">
+          </div>
+          <p class="text-sm text-slate-400">
+            <span class="text-slate-900 font-semibold">12명의 시니어 리드</span>가 이 로드맵을 검토했습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-4 bg-[#ADD94E] rounded-[32px] p-10 shadow-lg shadow-[#ADD94E]/20 text-[#1E293B] flex flex-col items-center justify-center text-center">
+        <div class="relative w-40 h-40 flex items-center justify-center mb-6">
+          <svg class="w-full h-full transform -rotate-90">
+            <circle cx="80" cy="80" r="70" stroke="rgba(30,41,59,0.1)" stroke-width="12" fill="transparent" />
+            <circle cx="80" cy="80" r="70" stroke="#1E293B" stroke-width="12" fill="transparent" stroke-dasharray="440" stroke-dashoffset="123" stroke-linecap="round" />
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <span class="text-5xl font-black">72</span>
+            <span class="text-xs opacity-80 uppercase tracking-widest font-bold">Fit Score</span>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-2">목표 달성 가능성: 높음</h3>
+        <p class="text-[#4A5D18] text-sm leading-relaxed">
+          기술적 기본기는 탄탄하나,<br/>리딩 경험 보완이 핵심입니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- Analysis: Strengths & Gaps -->
+    <section id="analysis-grid" class="grid grid-cols-2 gap-6">
+      <div id="strengths" class="bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-[#F5F9E8] text-[#8CB336] rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-circle-check text-xl"></i>
+          </div>
+          <h2 class="text-xl font-bold">강점 (Strengths)</h2>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 bg-emerald-50/30 rounded-2xl border border-emerald-100">
+            <span class="text-emerald-600 mt-1"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <p class="font-bold text-slate-800">실서비스 배포 경험</p>
+              <p class="text-sm text-slate-500">실제 사용자 피드백을 반영한 라이브 서비스 운영 경험</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 bg-emerald-50/30 rounded-2xl border border-emerald-100">
+            <span class="text-emerald-600 mt-1"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <p class="font-bold text-slate-800">UI/UX 개선 사례 보유</p>
+              <p class="text-sm text-slate-500">사용성 지표를 분석하고 디자인을 기술적으로 풀어낸 경험</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 bg-emerald-50/30 rounded-2xl border border-emerald-100">
+            <span class="text-emerald-600 mt-1"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <p class="font-bold text-slate-800">협업 경험과 문서화 역량</p>
+              <p class="text-sm text-slate-500">원활한 커뮤니케이션을 위한 개발 문서 작성 능력</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="gaps" class="bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+          </div>
+          <h2 class="text-xl font-bold">보완점 (Gaps)</h2>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 bg-rose-50/50 rounded-2xl border border-rose-100">
+            <span class="text-rose-600 mt-1"><i class="fa-solid fa-arrow-up"></i></span>
+            <div>
+              <p class="font-bold text-slate-800">대규모 트래픽 대응 경험 부족</p>
+              <p class="text-sm text-slate-500">수만 명 이상의 동시 접속 환경에서의 최적화 경험 필요</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 bg-rose-50/50 rounded-2xl border border-rose-100">
+            <span class="text-rose-600 mt-1"><i class="fa-solid fa-arrow-up"></i></span>
+            <div>
+              <p class="font-bold text-slate-800">프론트엔드 아키텍처 설계 경험 부족</p>
+              <p class="text-sm text-slate-500">확장성 있는 프로젝트 구조 설계 및 라이브러리 선정 안목</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 bg-rose-50/50 rounded-2xl border border-rose-100">
+            <span class="text-rose-600 mt-1"><i class="fa-solid fa-arrow-up"></i></span>
+            <div>
+              <p class="font-bold text-slate-800">리더십/멘토링 사례 부족</p>
+              <p class="text-sm text-slate-500">팀의 성장을 이끌고 기술적 의사결정을 주도한 경험</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Actions -->
+    <section id="next-actions" class="bg-slate-900 rounded-[32px] p-10 text-white">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl font-bold">지금 바로 실행하세요</h2>
+          <p class="text-slate-400">목표 달성을 위한 우선순위 액션 아이템</p>
+        </div>
+        <button class="px-6 py-3 bg-[#ADD94E] text-[#1E293B] rounded-2xl font-bold hover:bg-[#9BC93D] transition-all">
+          모든 태스크 보기
+        </button>
+      </div>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="bg-white/10 border border-white/10 p-6 rounded-2xl hover:bg-white/20 transition-all cursor-pointer">
+          <div class="w-10 h-10 bg-[#ADD94E] text-[#1E293B] rounded-lg flex items-center justify-center mb-4">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <p class="font-bold text-lg mb-2">성능 개선 프로젝트</p>
+          <p class="text-sm text-slate-400">1만 DAU 이상 서비스의 성능 개선 경험 확보</p>
+        </div>
+        <div class="bg-white/10 border border-white/10 p-6 rounded-2xl hover:bg-white/20 transition-all cursor-pointer">
+          <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mb-4">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <p class="font-bold text-lg mb-2">아키텍처 문서화</p>
+          <p class="text-sm text-slate-400">모듈화/아키텍처 설계 의사결정 과정 기록</p>
+        </div>
+        <div class="bg-white/10 border border-white/10 p-6 rounded-2xl hover:bg-white/20 transition-all cursor-pointer">
+          <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <p class="font-bold text-lg mb-2">코드리뷰 주도</p>
+          <p class="text-sm text-slate-400">후배 멘토링 및 팀 표준 가이드 수립</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Year Roadmap -->
+    <section id="roadmap" class="bg-white rounded-[32px] p-10 border border-slate-100 shadow-sm overflow-hidden">
+      <h2 class="text-2xl font-bold mb-12">3개년 커리어 로드맵</h2>
+      
+      <div class="relative">
+        <!-- Connecting Line -->
+        <div class="absolute left-[39px] top-0 bottom-0 w-1 bg-slate-100"></div>
+
+        <div class="space-y-16">
+          <!-- Year 1 -->
+          <div class="relative flex items-start gap-12 group">
+            <div class="z-10 w-20 h-20 bg-[#ADD94E] rounded-full flex flex-col items-center justify-center text-[#1E293B] shrink-0 shadow-lg shadow-[#ADD94E]/20">
+              <span class="text-xs font-bold opacity-80 uppercase">Year</span>
+              <span class="text-2xl font-black">01</span>
+            </div>
+            <div class="flex-1 pt-2">
+              <div class="flex items-center gap-3 mb-4">
+                <h3 class="text-xl font-bold">성능/품질 개선 역량 강화</h3>
+                <span class="px-3 py-1 bg-[#F5F9E8] text-[#4A5D18] text-xs font-bold rounded-lg">현재 단계</span>
+              </div>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="bg-[#F8FAFC] p-5 rounded-2xl border border-slate-100">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">KPI 01</p>
+                  <p class="text-slate-800 font-semibold">LCP 2.5s 이하 달성</p>
+                </div>
+                <div class="bg-[#F8FAFC] p-5 rounded-2xl border border-slate-100">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">KPI 02</p>
+                  <p class="text-slate-800 font-semibold">테스트 커버리지 40%</p>
+                </div>
+                <div class="bg-[#F8FAFC] p-5 rounded-2xl border border-slate-100">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">KPI 03</p>
+                  <p class="text-slate-800 font-semibold">아키텍처 개선안 적용</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 2 -->
+          <div class="relative flex items-start gap-12 group">
+            <div class="z-10 w-20 h-20 bg-white border-4 border-slate-100 rounded-full flex flex-col items-center justify-center text-slate-400 shrink-0">
+              <span class="text-xs font-bold opacity-80 uppercase">Year</span>
+              <span class="text-2xl font-black">02</span>
+            </div>
+            <div class="flex-1 pt-2">
+              <div class="flex items-center gap-3 mb-4">
+                <h3 class="text-xl font-bold">리드 역량(설계/리뷰/조율) 강화</h3>
+              </div>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 border-dashed">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">Target</p>
+                  <p class="text-slate-800 font-semibold">중형 프로젝트 리딩</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 border-dashed">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">Target</p>
+                  <p class="text-slate-800 font-semibold">프론트 표준 가이드 작성</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 border-dashed">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">Target</p>
+                  <p class="text-slate-800 font-semibold">주요 기능 릴리즈 책임</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 3 -->
+          <div class="relative flex items-start gap-12 group">
+            <div class="z-10 w-20 h-20 bg-white border-4 border-slate-100 rounded-full flex flex-col items-center justify-center text-slate-400 shrink-0">
+              <span class="text-xs font-bold opacity-80 uppercase">Year</span>
+              <span class="text-2xl font-black">03</span>
+            </div>
+            <div class="flex-1 pt-2">
+              <div class="flex items-center gap-3 mb-4">
+                <h3 class="text-xl font-bold">조직/비즈니스 임팩트 확대</h3>
+              </div>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 border-dashed">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">Goal</p>
+                  <p class="text-slate-800 font-semibold">신규 제품 전반 리딩</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 border-dashed">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">Goal</p>
+                  <p class="text-slate-800 font-semibold">팀 생산성 지표 달성</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 border-dashed">
+                  <p class="text-xs text-slate-400 mb-1 font-bold">Goal</p>
+                  <p class="text-slate-800 font-semibold">리더 후보자 평가 확보</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Action Button -->
+  <div class="absolute bottom-10 right-10 flex flex-col gap-4">
+    <button class="w-16 h-16 bg-white text-[#4A5D18] rounded-full shadow-xl border border-[#F5F9E8] flex items-center justify-center text-2xl hover:scale-110 transition-transform">
+      <i class="fa-solid fa-share-nodes"></i>
+    </button>
+    <button class="w-16 h-16 bg-[#ADD94E] text-[#1E293B] rounded-full shadow-xl shadow-[#ADD94E]/20 flex items-center justify-center text-2xl hover:scale-110 transition-transform">
+      <i class="fa-solid fa-download"></i>
+    </button>
+  </div>
+</div>
+</html>

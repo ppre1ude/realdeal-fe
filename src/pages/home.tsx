@@ -291,7 +291,7 @@ const HomePage = () => (
               <MatchingTitle>나와 가장 잘 맞는 기업</MatchingTitle>
               <MatchingSubtitle>AI가 분석한 인재상 일치도를 기반으로 추천합니다.</MatchingSubtitle>
             </div>
-            <ViewAllButton type="button">
+            <ViewAllButton to="/company-recommendation">
               전체보기 <i className="fa-solid fa-chevron-right" aria-hidden="true" />
             </ViewAllButton>
           </MatchingHeader>
