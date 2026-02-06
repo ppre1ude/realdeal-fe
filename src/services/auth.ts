@@ -72,6 +72,8 @@ export const getCurrentUser = async (): Promise<CurrentUserResponse> => {
  */
 export const logout = (): void => {
   localStorage.removeItem('accessToken')
+  localStorage.removeItem('refreshToken')
+  sessionStorage.removeItem('refreshToken')
 }
 
 /**
