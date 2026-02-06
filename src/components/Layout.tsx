@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
 import {
   Header,
   HeaderActions,
@@ -41,7 +40,7 @@ const Layout = ({ children }: LayoutProps) => {
         </HeaderLeft>
         <HeaderActions>
           <TextLinkButton to="/login">로그인</TextLinkButton>
-          <PrimaryPillButton to="/register">무료 시작하기</PrimaryPillButton>
+          <PrimaryPillButton to="/register">회원가입</PrimaryPillButton>
         </HeaderActions>
       </Header>
       {children}
