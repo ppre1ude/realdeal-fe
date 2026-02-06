@@ -2,28 +2,7 @@
 import { Link } from 'react-router-dom'
 
 export const HomeGlobalStyle = createGlobalStyle`
-  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
-
-  * {
-    box-sizing: border-box;
-    font-family: 'Pretendard', sans-serif;
-  }
-
-  body {
-    margin: 0;
-    background: #ffffff;
-    color: #111827;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  button {
-    font-family: inherit;
-  }
+  /* Global styles are applied in index.html to prevent layout shift on refresh. */
 `
 
 export const Page = styled.div`
