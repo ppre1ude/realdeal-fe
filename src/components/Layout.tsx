@@ -25,15 +25,14 @@ const Layout = ({ children }: LayoutProps) => {
         <HeaderLeft>
           <Logo to="/">
             <LogoIcon>
-              <i className="fa-solid fa-gem" aria-hidden="true" />
+              <i className="fa-solid fa-envelope" aria-hidden="true" />
             </LogoIcon>
             <LogoText>LINKED-INSA</LogoText>
           </Logo>
           <Nav>
-            <NavLink to="/" $active>
-              홈
+            <NavLink to="/resume-edit" $active>
+              AI 이력서 첨삭
             </NavLink>
-            <NavAnchor href="/resume-edit">AI 이력서 첨삭</NavAnchor>
             <NavAnchor href="/company-recommendation">기업 추천</NavAnchor>
             <NavAnchor href="/matching-status">매칭 현황</NavAnchor>
           </Nav>

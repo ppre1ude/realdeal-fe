@@ -19,9 +19,7 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 80px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #f3f4f6;
+  background: #17171b;
 
   @media (max-width: 1100px) {
     flex-direction: column;
@@ -59,16 +57,15 @@ export const Logo = styled(Link)`
 `
 
 export const LogoIcon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: #add94e;
   color: white;
-  border-radius: 12px;
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 15px -3px rgba(173, 217, 78, 0.2);
-  font-size: 20px;
+  font-size: 18px;
 `
 
 export const LogoText = styled.span`
@@ -79,8 +76,8 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 32px;
-  color: #6b7280;
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 600;
 
   @media (max-width: 1100px) {
     flex-wrap: wrap;
@@ -89,8 +86,8 @@ export const Nav = styled.nav`
 `
 
 export const NavLink = styled(Link)<{ $active?: boolean }>`
-  color: ${({ $active }) => ($active ? '#111827' : '#6b7280')};
-  font-weight: ${({ $active }) => ($active ? 700 : 500)};
+  color: #ffffff;
+  font-weight: ${({ $active }) => ($active ? 700 : 600)};
   transition: color 0.2s ease;
   text-decoration: none;
 
@@ -100,7 +97,7 @@ export const NavLink = styled(Link)<{ $active?: boolean }>`
 `
 
 export const NavAnchor = styled.a`
-  color: #6b7280;
+  color: #ffffff;
   transition: color 0.2s ease;
   text-decoration: none;
 
@@ -122,26 +119,27 @@ export const HeaderActions = styled.div`
 
 export const TextLinkButton = styled(Link)`
   padding: 10px 24px;
-  color: #6b7280;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: #111827;
+    color: #add94e;
   }
 `
 
 export const PrimaryPillButton = styled(Link)`
   padding: 10px 24px;
   background: #add94e;
-  color: #000;
+  color: #0b0b0e;
   font-weight: 700;
   border-radius: 9999px;
   text-decoration: none;
   transition: all 0.2s ease;
 
   &:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background: #b8e45a;
+    box-shadow: 0 10px 18px -8px rgba(0, 0, 0, 0.45);
   }
 `

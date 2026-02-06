@@ -131,6 +131,7 @@ export const HeroSection = styled.section`
   width: 100%;
   height: 640px;
   padding: 0 80px;
+  box-sizing: border-box;
   background: #f9fbf4;
   overflow: hidden;
 `
@@ -817,6 +818,7 @@ export const StepBlock = styled.div<{ $reverse?: boolean; $bgColor?: string }>`
   padding: 80px;
   gap: 80px;
   background: ${({ $bgColor }) => $bgColor || '#ffffff'};
+  box-sizing: border-box;
 
   @media (max-width: 1024px) {
     flex-direction: column;
