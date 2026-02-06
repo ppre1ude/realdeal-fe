@@ -1,17 +1,18 @@
 ﻿import styled from 'styled-components'
 
-export const Card = styled.section`
+export const Card = styled.section<{ $offsetTop?: number }>`
   width: 100%;
-  max-width: 420px;
+  max-width: 448px;
   padding: 32px;
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-top: ${({ $offsetTop }) => ($offsetTop ? `${$offsetTop}px` : '0')};
 `
 
 export const CardHeader = styled.div`
-  margin-bottom: 24px;
+  margin: 0;
 `
 
 export const CardTitle = styled.h2`
@@ -22,13 +23,11 @@ export const CardTitle = styled.h2`
 `
 
 export const CardSubtitle = styled.p`
-  margin: 0;
+  margin: 0 0 32px;
   font-size: 14px;
   color: #6b7280;
 `
 
 export const CardBody = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: block;
 `

@@ -22,11 +22,17 @@ export const Label = styled.label`
 export const TextInput = styled.input`
   width: 100%;
   padding: 12px 16px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #d1d5db;
   background: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   color: #111827;
+  outline: none;
+
+  &::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+  }
 
   &:focus {
     outline: none;
@@ -39,32 +45,33 @@ export const RowBetween = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 0;
 `
 
 export const CheckboxContainer = styled.div<{ $alignStart?: boolean }>`
   display: flex;
   align-items: ${({ $alignStart }) => ($alignStart ? 'flex-start' : 'center')};
-  gap: 8px;
-  color: #6b7280;
+  color: #4b5563;
 `
 
 export const CheckboxInput = styled.input<{ $alignStart?: boolean }>`
   width: 16px;
   height: 16px;
-  margin-top: ${({ $alignStart }) => ($alignStart ? '2px' : '0')};
+  margin-top: ${({ $alignStart }) => ($alignStart ? '4px' : '0')};
   accent-color: #add94e;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
 `
 
 export const CheckboxLabel = styled.label`
   font-size: 14px;
   line-height: 1.4;
+  margin-left: 8px;
 `
 
 export const HelperLink = styled.a`
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: #add94e;
 
   &:hover {
@@ -76,10 +83,10 @@ export const PrimaryButton = styled.button`
   width: 100%;
   padding: 12px 16px;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #add94e;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
@@ -92,7 +99,8 @@ export const PrimaryButton = styled.button`
 export const DividerRow = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 0;
+  margin: 24px 0;
 `
 
 export const DividerLine = styled.div`
@@ -102,25 +110,27 @@ export const DividerLine = styled.div`
 `
 
 export const DividerText = styled.span`
-  font-size: 13px;
+  font-size: 14px;
   color: #9ca3af;
+  padding: 0 16px;
 `
 
-export const SocialButtonBase = styled.button`
+export const SocialButtonBase = styled.button<{ $withBottomMargin?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   width: 100%;
   padding: 12px 16px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #fde68a;
   background: #fefce8;
   color: #374151;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease;
+  margin-bottom: ${({ $withBottomMargin }) => ($withBottomMargin ? '12px' : '0')};
 
   &:hover {
     background: #fef3c7;
@@ -135,7 +145,7 @@ export const SocialIcon = styled.span`
 `
 
 export const BottomText = styled.p`
-  margin: 0;
+  margin: 32px 0 0;
   font-size: 14px;
   color: #6b7280;
   text-align: center;

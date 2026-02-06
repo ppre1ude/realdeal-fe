@@ -2,6 +2,7 @@
 
 type SocialButtonProps = {
   text: string
+  withBottomMargin?: boolean
 }
 
 const ChatIcon = () => (
@@ -20,8 +21,8 @@ const ChatIcon = () => (
   </svg>
 )
 
-const SocialButton = ({ text }: SocialButtonProps) => (
-  <SocialButtonBase type="button">
+const SocialButton = ({ text, withBottomMargin }: SocialButtonProps) => (
+  <SocialButtonBase type="button" $withBottomMargin={withBottomMargin}>
     <SocialIcon aria-hidden="true">
       <ChatIcon />
     </SocialIcon>
