@@ -1,8 +1,4 @@
 ﻿import {
-<<<<<<< HEAD
-=======
-  AnalyzerPanel,
->>>>>>> origin/feature/ju
   AppShell,
   CardButton,
   CompanyCard,
@@ -12,19 +8,8 @@
   CompanyName,
   CompanyRole,
   DarkActionButton,
-<<<<<<< HEAD
   Fab,
   FabButton,
-=======
-  Dot,
-  Fab,
-  FabButton,
-  FeatureCard,
-  FeatureDescription,
-  FeatureGrid,
-  FeatureIcon,
-  FeatureTitle,
->>>>>>> origin/feature/ju
   HeroActions,
   HeroBadge,
   HeroContent,
@@ -35,10 +20,6 @@
   HeroTitle,
   HeroVisual,
   HomeGlobalStyle,
-<<<<<<< HEAD
-=======
-  LightActionButton,
->>>>>>> origin/feature/ju
   MatchBar,
   MatchBox,
   MatchFill,
@@ -47,34 +28,12 @@
   MatchingHeader,
   MatchingSubtitle,
   MatchingTitle,
-<<<<<<< HEAD
   Page,
   ProcessSection,
-=======
-  OriginalText,
-  Page,
-  PanelBlock,
-  PanelBlockTitle,
-  PanelBody,
-  PanelCode,
-  PanelDot,
-  PanelDots,
-  PanelHeader,
-  PanelHeaderMeta,
-  PanelHeaderRow,
-  PanelHeaderTitle,
-  PanelStack,
-  PanelSpacer,
-  ResumeIntro,
-  ResumeLayout,
-  ResumeText,
-  ResumeTitle,
->>>>>>> origin/feature/ju
   Section,
   SectionHeader,
   SectionSubtitle,
   SectionTitle,
-<<<<<<< HEAD
   StepBlock,
   StepContent,
   StepDescription,
@@ -103,27 +62,6 @@
   ViewAllButton,
 } from './home.styles'
 
-=======
-  StatusBadge,
-  SuggestionBadge,
-  SuggestionBox,
-  Tag,
-  TagRow,
-  UploadDropzone,
-  UploadIcon,
-  UploadSubtitle,
-  UploadTitle,
-  ViewAllButton,
-  KeywordHint,
-} from './home.styles'
-
-type FeatureItem = {
-  title: string
-  description: string
-  iconClass: string
-}
-
->>>>>>> origin/feature/ju
 type CompanyItem = {
   name: string
   role: string
@@ -133,30 +71,6 @@ type CompanyItem = {
   imageUrl: string
 }
 
-<<<<<<< HEAD
-=======
-const features: FeatureItem[] = [
-  {
-    title: '01. 이력서 업로드',
-    description:
-      '작성해둔 워드나 PDF 이력서를 그대로 업로드하세요. AI가 즉시 텍스트를 추출하고 분석합니다.',
-    iconClass: 'fa-solid fa-cloud-arrow-up',
-  },
-  {
-    title: '02. 인재상 맞춤 첨삭',
-    description:
-      '지원하려는 기업의 최근 인재상과 핵심 키워드를 반영하여 이력서의 문항별 내용을 최적화합니다.',
-    iconClass: 'fa-solid fa-wand-magic-sparkles',
-  },
-  {
-    title: '03. 최적 기업 매칭',
-    description:
-      '첨삭된 이력서를 바탕으로 당신의 강점이 가장 잘 발휘될 수 있는 기업들을 정교하게 추천해드립니다.',
-    iconClass: 'fa-solid fa-handshake-angle',
-  },
-]
-
->>>>>>> origin/feature/ju
 const companies: CompanyItem[] = [
   {
     name: '카카오뱅크',
@@ -205,7 +119,6 @@ const HomePage = () => (
           <HeroContent>
             <HeroBadge>신입 취준생 필수 플랫폼</HeroBadge>
             <HeroTitle>
-<<<<<<< HEAD
               당신의 이력서로
               <br />
               <HeroHighlight>합격 보장 로드맵</HeroHighlight>을
@@ -216,30 +129,12 @@ const HomePage = () => (
               AI가 현재 능력과 목표에 맞게
               <br />
               당신의 미래를 컨설팅해드릴게요.
-=======
-              당신의 이력서,
-              <br />
-              <HeroHighlight>기업의 인재상</HeroHighlight>에
-              <br />
-              맞게 재탄생합니다.
-            </HeroTitle>
-            <HeroDescription>
-              단순한 오타 교정이 아닙니다. AI가 기업의 핵심 가치를 분석하여
-              <br />
-              당신의 경험을 가장 매력적인 스토리로 바꿔드립니다.
->>>>>>> origin/feature/ju
             </HeroDescription>
             <HeroActions>
               <DarkActionButton type="button">
                 <i className="fa-solid fa-file-arrow-up" aria-hidden="true" />
-<<<<<<< HEAD
                 이력서 업로드하러 가기
               </DarkActionButton>
-=======
-                이력서 업로드하고 시작하기
-              </DarkActionButton>
-              <LightActionButton type="button">서비스 둘러보기</LightActionButton>
->>>>>>> origin/feature/ju
             </HeroActions>
           </HeroContent>
           <HeroVisual>
@@ -250,16 +145,11 @@ const HomePage = () => (
           </HeroVisual>
         </HeroSection>
 
-<<<<<<< HEAD
         <ProcessSection>
-=======
-        <Section>
->>>>>>> origin/feature/ju
           <SectionHeader>
             <SectionTitle>합격까지 이어지는 3단계 프로세스</SectionTitle>
             <SectionSubtitle>복잡한 취업 준비, 이제 AI와 함께 효율적으로 해결하세요.</SectionSubtitle>
           </SectionHeader>
-<<<<<<< HEAD
 
           <StepBlock $bgColor="#f9fafb">
             <StepContent>
@@ -392,87 +282,6 @@ const HomePage = () => (
             </StepImage>
           </StepBlock>
         </ProcessSection>
-=======
-          <FeatureGrid>
-            {features.map((feature) => (
-              <FeatureCard key={feature.title}>
-                <FeatureIcon>
-                  <i className={feature.iconClass} aria-hidden="true" />
-                </FeatureIcon>
-                <FeatureTitle>{feature.title}</FeatureTitle>
-                <FeatureDescription>{feature.description}</FeatureDescription>
-              </FeatureCard>
-            ))}
-          </FeatureGrid>
-        </Section>
-
-        <Section $tone="muted">
-          <ResumeLayout>
-            <ResumeIntro>
-              <ResumeTitle>
-                지금 바로
-                <br />
-                무료로 시작해보세요
-              </ResumeTitle>
-              <ResumeText>
-                파일을 드래그하거나 클릭하여 업로드하면 AI가 실시간으로 분석을 시작합니다.
-              </ResumeText>
-              <UploadDropzone>
-                <UploadIcon>
-                  <i className="fa-solid fa-file-circle-plus" aria-hidden="true" />
-                </UploadIcon>
-                <UploadTitle>이력서 파일 선택</UploadTitle>
-                <UploadSubtitle>PDF, DOCX (최대 10MB)</UploadSubtitle>
-              </UploadDropzone>
-            </ResumeIntro>
-            <AnalyzerPanel>
-              <PanelHeader>
-              <PanelDots>
-                <PanelDot $color="#ef4444" />
-                <PanelDot $color="#facc15" />
-                <PanelDot $color="#22c55e" />
-              </PanelDots>
-              <PanelCode>AI_RESUME_ANALYZER_V2.0</PanelCode>
-              <PanelSpacer />
-            </PanelHeader>
-              <PanelBody>
-                <PanelHeaderRow>
-                  <div>
-                    <PanelHeaderTitle>네이버 클라우드 - 서비스 기획 직무</PanelHeaderTitle>
-                    <PanelHeaderMeta>기업 핵심가치: [도전], [사용자 중심], [팀워크]</PanelHeaderMeta>
-                  </div>
-                  <StatusBadge>분석 완료</StatusBadge>
-                </PanelHeaderRow>
-                <PanelStack>
-                  <PanelBlock>
-                    <PanelBlockTitle>
-                      <Dot $color="#add94e" />
-                      기존 내용
-                    </PanelBlockTitle>
-                    <OriginalText>
-                      대학교 시절 팀 프로젝트에서 리더를 맡아 프로젝트를 성공적으로 마무리했습니다.
-                      팀원들 간의 소통을 중요하게 생각했습니다.
-                    </OriginalText>
-                  </PanelBlock>
-                  <PanelBlock>
-                    <PanelBlockTitle>
-                      <Dot $color="#3b82f6" />
-                      AI 첨삭 제안
-                    </PanelBlockTitle>
-                    <SuggestionBox>
-                      <SuggestionBadge>Recommended</SuggestionBadge>
-                      '사용자 중심'의 사고방식을 바탕으로 팀 프로젝트의 목표를 재설정하여, 전년 대비
-                      사용자 체류 시간을 20% 향상시킨 경험이 있습니다. 리더로서 팀원 간의 의견 충돌을
-                      데이터 기반의 의사결정으로 중재하며 협업 시너지를 극대화했습니다.
-                    </SuggestionBox>
-                    <KeywordHint>#데이터기반 #사용자중심 #협업시너지 키워드가 강화되었습니다.</KeywordHint>
-                  </PanelBlock>
-                </PanelStack>
-              </PanelBody>
-            </AnalyzerPanel>
-          </ResumeLayout>
-        </Section>
->>>>>>> origin/feature/ju
 
         <Section>
           <MatchingHeader>
