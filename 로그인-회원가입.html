@@ -1,0 +1,127 @@
+<html>
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" crossorigin="anonymous"></script>
+            <style> * { font-family: 'Pretendard', sans-serif; } </style>
+        </head>
+
+        
+<div class="ui-screen">
+    <div id="app" class="relative w-[1440px] min-h-[1024px] bg-white">
+  <div id="header" class="sticky top-0 z-10 flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100">
+    <div class="flex items-center gap-2">
+      <i class="text-2xl fa-solid fa-leaf" style="color: #ADD94E;"></i>
+      <span class="text-xl font-semibold text-gray-800">모던그린</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="#login" class="text-sm font-medium text-gray-600 hover:text-gray-900">로그인</a>
+      <a href="#signup" class="text-sm font-medium text-gray-600 hover:text-gray-900">회원가입</a>
+      <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">문의하기</button>
+    </div>
+  </div>
+
+  <main id="content" class="flex flex-col items-center justify-center flex-1 px-8 py-16">
+    <div id="login" class="w-full max-w-md p-8 bg-white border rounded-2xl border-gray-200 shadow-sm">
+      <h2 class="mb-2 text-2xl font-bold text-gray-900">로그인</h2>
+      <p class="mb-8 text-sm text-gray-500">계정에 로그인하여 서비스를 이용해보세요.</p>
+
+      <form class="space-y-5">
+        <div>
+          <label for="login-email" class="block mb-2 text-sm font-medium text-gray-700">이메일</label>
+          <input type="email" id="login-email" placeholder="your@email.com" class="w-full px-4 py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-[#ADD94E] focus:border-transparent outline-none">
+        </div>
+        <div>
+          <label for="login-password" class="block mb-2 text-sm font-medium text-gray-700">비밀번호</label>
+          <input type="password" id="login-password" placeholder="••••••••" class="w-full px-4 py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-[#ADD94E] focus:border-transparent outline-none">
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input type="checkbox" id="remember" class="w-4 h-4 border-gray-300 rounded text-[#ADD94E] focus:ring-[#ADD94E]">
+            <label for="remember" class="ml-2 text-sm text-gray-600">로그인 상태 유지</label>
+          </div>
+          <a href="#" class="text-sm font-medium text-[#ADD94E] hover:underline">비밀번호 찾기</a>
+        </div>
+        <button type="submit" class="w-full py-3 font-semibold text-white rounded-lg bg-[#ADD94E] hover:bg-[#9bc846]">로그인</button>
+      </form>
+
+      <div class="flex items-center my-6">
+        <div class="flex-1 h-px bg-gray-200"></div>
+        <span class="px-4 text-sm text-gray-400">또는</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+
+      <button class="flex items-center justify-center w-full gap-3 px-4 py-3 font-medium text-gray-700 bg-yellow-50 border border-yellow-200 rounded-lg hover:bg-yellow-100">
+        <i class="text-lg fa-solid fa-comment"></i>
+        카카오톡으로 로그인
+      </button>
+
+      <p class="mt-8 text-center text-gray-500 text-sm">
+        계정이 없으신가요?
+        <a href="#signup" class="font-semibold text-[#ADD94E] hover:underline"> 회원가입</a>
+      </p>
+    </div>
+
+    <div id="signup" class="w-full max-w-md p-8 mt-16 bg-white border rounded-2xl border-gray-200 shadow-sm">
+      <h2 class="mb-2 text-2xl font-bold text-gray-900">회원가입</h2>
+      <p class="mb-8 text-sm text-gray-500">새로운 계정을 만들어 보세요.</p>
+
+      <form class="space-y-5">
+        <div>
+          <label for="signup-name" class="block mb-2 text-sm font-medium text-gray-700">이름</label>
+          <input type="text" id="signup-name" placeholder="홍길동" class="w-full px-4 py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-[#ADD94E] focus:border-transparent outline-none">
+        </div>
+        <div>
+          <label for="signup-email" class="block mb-2 text-sm font-medium text-gray-700">이메일</label>
+          <input type="email" id="signup-email" placeholder="your@email.com" class="w-full px-4 py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-[#ADD94E] focus:border-transparent outline-none">
+        </div>
+        <div>
+          <label for="signup-password" class="block mb-2 text-sm font-medium text-gray-700">비밀번호</label>
+          <input type="password" id="signup-password" placeholder="••••••••" class="w-full px-4 py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-[#ADD94E] focus:border-transparent outline-none">
+        </div>
+        <div>
+          <label for="signup-password-confirm" class="block mb-2 text-sm font-medium text-gray-700">비밀번호 확인</label>
+          <input type="password" id="signup-password-confirm" placeholder="••••••••" class="w-full px-4 py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-[#ADD94E] focus:border-transparent outline-none">
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" id="terms" class="w-4 h-4 mt-1 border-gray-300 rounded text-[#ADD94E] focus:ring-[#ADD94E]">
+          <label for="terms" class="ml-2 text-sm text-gray-600">
+            <span>이용약관 및 개인정보 처리방침에 동의합니다.</span>
+            <a href="#" class="text-[#ADD94E] hover:underline"> (자세히 보기)</a>
+          </label>
+        </div>
+        <button type="submit" class="w-full py-3 font-semibold text-white rounded-lg bg-[#ADD94E] hover:bg-[#9bc846]">회원가입 완료</button>
+      </form>
+
+      <div class="flex items-center my-6">
+        <div class="flex-1 h-px bg-gray-200"></div>
+        <span class="px-4 text-sm text-gray-400">간편 가입</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+
+      <button class="flex items-center justify-center w-full gap-3 px-4 py-3 mb-3 font-medium text-gray-700 bg-yellow-50 border border-yellow-200 rounded-lg hover:bg-yellow-100">
+        <i class="text-lg fa-solid fa-comment"></i>
+        카카오톡으로 회원가입
+      </button>
+
+      <p class="mt-8 text-center text-gray-500 text-sm">
+        이미 계정이 있으신가요?
+        <a href="#login" class="font-semibold text-[#ADD94E] hover:underline"> 로그인</a>
+      </p>
+    </div>
+  </main>
+
+  <div id="footer" class="px-8 py-6 border-t border-gray-100">
+    <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <div class="text-sm text-gray-500">© 2025 모던그린. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-700">이용약관</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-700">개인정보처리방침</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-700">고객센터</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</html>
