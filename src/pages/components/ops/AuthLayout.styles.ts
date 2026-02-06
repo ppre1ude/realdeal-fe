@@ -7,29 +7,18 @@ export const GlobalStyle = createGlobalStyle`
 export const Page = styled.div`
   min-height: 100vh;
   background: #ffffff;
-  display: flex;
-  justify-content: center;
+  width: 100%;
 `
 
 export const AppFrame = styled.div`
-  width: 1440px;
-  min-height: 1024px;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
   background: #ffffff;
   position: relative;
   display: flex;
   flex-direction: column;
-`
-
-export const Header = styled.header`
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 32px;
-  background: #ffffff;
-  border-bottom: 1px solid #f3f4f6;
+  margin: 0 auto;
 `
 
 export const Brand = styled.div`
@@ -91,42 +80,13 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 64px 32px;
-`
-
-export const Footer = styled.footer`
-  border-top: 1px solid #f3f4f6;
-  padding: 24px 32px;
-`
-
-export const FooterRow = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  padding: 64px 24px;
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    padding: 64px 32px;
   }
-`
 
-export const FooterCopy = styled.div`
-  font-size: 14px;
-  color: #6b7280;
-`
-
-export const FooterLinks = styled.div`
-  display: flex;
-  gap: 24px;
-`
-
-export const FooterLink = styled.a`
-  font-size: 14px;
-  color: #6b7280;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #374151;
+  @media (min-width: 1024px) {
+    padding: 64px 48px;
   }
 `

@@ -5,6 +5,9 @@ export const LayoutContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 `
 
 export const Header = styled.header`
