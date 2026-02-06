@@ -6,6 +6,8 @@ import {
   ExperienceButtons,
   ExperienceRow,
   FieldGroup,
+  FieldGroupWide,
+  FieldHint,
   FieldLabel,
   FileActionButton,
   FileCard,
@@ -43,6 +45,7 @@ import {
   StepTrack,
   StepperSection,
   Subtitle,
+  TextArea,
   TextInput,
   Title,
   UploadActions,
@@ -74,6 +77,7 @@ const ResumeUploadPage = () => {
   const [desiredRole, setDesiredRole] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
+  const [goal, setGoal] = useState('')
   const [experience, setExperience] = useState<string>('')
   const [file, setFile] = useState<File | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -190,6 +194,16 @@ const ResumeUploadPage = () => {
                       onChange={(event) => setPhone(event.target.value)}
                     />
                   </FieldGroup>
+                  <FieldGroupWide>
+                    <FieldLabel htmlFor="goal">3년 안 목표</FieldLabel>
+                    <FieldHint>당신의 3년 안 목표를 작성해주세요</FieldHint>
+                    <TextArea
+                      id="goal"
+                      value={goal}
+                      placeholder="예) 3년 안에 데이터 분석 역량을 강화해 프로덕트 데이터 팀에 합류하고 싶습니다."
+                      onChange={(event) => setGoal(event.target.value)}
+                    />
+                  </FieldGroupWide>
                   <ExperienceRow>
                     <FieldLabel>경력 사항</FieldLabel>
                     <ExperienceButtons>
@@ -260,31 +274,6 @@ const ResumeUploadPage = () => {
           </Content>
         </Main>
 
-        <Footer>
-          <FooterInner>
-            <FooterBrand>
-              <FooterBrandRow>
-                <FooterBrandIcon>
-                  <i className="fa-solid fa-bolt" aria-hidden="true" />
-                </FooterBrandIcon>
-                <FooterBrandText>LINKED-INSA</FooterBrandText>
-              </FooterBrandRow>
-              <FooterCopy>© 2025 LINKED-INSA. All rights reserved.</FooterCopy>
-            </FooterBrand>
-            <FooterLinks>
-              <FooterColumn>
-                <FooterHeading>지원</FooterHeading>
-                <FooterLink href="#">이용 가이드</FooterLink>
-                <FooterLink href="#">문의하기</FooterLink>
-              </FooterColumn>
-              <FooterColumn>
-                <FooterHeading>약관</FooterHeading>
-                <FooterLink href="#">이용약관</FooterLink>
-                <FooterLink href="#">개인정보 처리방침</FooterLink>
-              </FooterColumn>
-            </FooterLinks>
-          </FooterInner>
-        </Footer>
       </Shell>
     </Page>
   )

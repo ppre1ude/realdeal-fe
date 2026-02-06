@@ -8,8 +8,6 @@
   CompanyName,
   CompanyRole,
   DarkActionButton,
-  Fab,
-  FabButton,
   HeroActions,
   HeroBadge,
   HeroContent,
@@ -131,7 +129,7 @@ const HomePage = () => (
               당신의 미래를 컨설팅해드릴게요.
             </HeroDescription>
             <HeroActions>
-              <DarkActionButton type="button">
+              <DarkActionButton to="/resume-upload">
                 <i className="fa-solid fa-file-arrow-up" aria-hidden="true" />
                 이력서 업로드하러 가기
               </DarkActionButton>
@@ -226,8 +224,9 @@ const HomePage = () => (
             <StepImage>
               <StepImageWrapper>
                 <StepImageContent
-                  src="https://gmcnqdpighpxhzpesqwf.supabase.co/storage/v1/object/public/generated-images/image-8289f933-d4fd-4249-bd51-bf474b7a5152.jpg"
-                  alt="Close up of a digital document where text is being rewritten by AI, showing before and after comparisons with green highlights."
+                  src="/calender-iso-color.svg"
+                  alt="AI가 생성한 로드맵 캘린더 일러스트"
+                  $tone="match"
                 />
               </StepImageWrapper>
             </StepImage>
@@ -276,7 +275,10 @@ const HomePage = () => (
             <StepImage>
               <StepImageWrapper>
                 <StepImageContent
-                  src="https://gmcnqdpighpxhzpesqwf.supabase.co/storage/v1/object/public/generated-images/image-6d37a3f0-38ef-43f4-a0aa-cae3ecc6b559.jpg"
+                  src="/link-iso-color.png"
+                  alt="맞춤 기업 매칭을 표현한 링크 일러스트"
+                  $tone="match"
+                  $shadowTone="neutral"
                 />
               </StepImageWrapper>
             </StepImage>
@@ -319,11 +321,6 @@ const HomePage = () => (
           </CompanyGrid>
         </Section>
 
-        <Fab>
-          <FabButton type="button" aria-label="문의하기">
-            <i className="fa-solid fa-comment-dots" aria-hidden="true" />
-          </FabButton>
-        </Fab>
       </AppShell>
     </Page>
   </>

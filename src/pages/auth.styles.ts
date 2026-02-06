@@ -2,15 +2,24 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Page = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
   width: 100%;
-  background: #ffffff;
+  overflow: hidden;
+  background: radial-gradient(700px 420px at 50% 45%, #f3f8e9 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, #ffffff 0%, #f8faf5 100%);
+
+  @media (max-height: 820px) {
+    height: auto;
+    overflow: auto;
+  }
 `
 
 export const Frame = styled.div`
   width: 100%;
   max-width: 1440px;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -21,14 +30,14 @@ export const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 64px 24px;
+  padding: 24px 24px;
 
   @media (min-width: 768px) {
-    padding: 64px 32px;
+    padding: 32px 32px;
   }
 
   @media (min-width: 1024px) {
-    padding: 64px 48px;
+    padding: 40px 48px;
   }
 `
 
@@ -90,6 +99,7 @@ export const Label = styled.label`
 export const TextInput = styled.input`
   width: 100%;
   padding: 12px 16px;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid #d1d5db;
   background: #ffffff;
@@ -149,6 +159,7 @@ export const HelperLink = styled.a`
 export const PrimaryButton = styled.button`
   width: 100%;
   padding: 12px 16px;
+  box-sizing: border-box;
   border: none;
   border-radius: 8px;
   background: #add94e;
