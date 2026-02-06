@@ -1,16 +1,17 @@
 ﻿import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import HomePage from './pages/home'
+import HomePage from './pages/Home'
 import LoginPage from './pages/login'
 import RegisterPage from './pages/register'
+import ResumeReportPage from './pages/resume-report'
 
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Navigate to="/home" replace />} />
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="*" element={<Navigate to="/home" replace />} />
+      <Route path="/resume-report" element={<ResumeReportPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
 )
