@@ -51,6 +51,9 @@ const LoginPage = () => {
         sessionStorage.setItem('refreshToken', response.refreshToken)
       }
 
+      // 커스텀 이벤트 발생 (Layout 컴포넌트에서 상태 업데이트)
+      window.dispatchEvent(new Event('authStateChanged'))
+      
       // 홈으로 리다이렉트
       navigate('/')
     } catch (err) {

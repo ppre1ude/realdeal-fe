@@ -59,6 +59,9 @@ const RegisterPage = () => {
       // 회원가입 시에도 refreshToken을 localStorage에 저장 (자동 로그인)
       localStorage.setItem('refreshToken', response.refreshToken)
 
+      // 커스텀 이벤트 발생 (Layout 컴포넌트에서 상태 업데이트)
+      window.dispatchEvent(new Event('authStateChanged'))
+      
       // 홈으로 리다이렉트
       navigate('/')
     } catch (err) {

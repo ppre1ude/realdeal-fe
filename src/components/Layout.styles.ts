@@ -123,6 +123,28 @@ export const TextLinkButton = styled(Link)`
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+
+  &:hover {
+    color: #add94e;
+  }
+`
+
+export const TextLinkButtonAsButton = styled.button`
+  padding: 10px 24px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
 
   &:hover {
     color: #add94e;
@@ -137,6 +159,29 @@ export const PrimaryPillButton = styled(Link)`
   border-radius: 9999px;
   text-decoration: none;
   transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+
+  &:hover {
+    background: #b8e45a;
+    box-shadow: 0 10px 18px -8px rgba(0, 0, 0, 0.45);
+  }
+`
+
+export const PrimaryPillButtonAsButton = styled.button`
+  padding: 10px 24px;
+  background: #add94e;
+  color: #0b0b0e;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
 
   &:hover {
     background: #b8e45a;

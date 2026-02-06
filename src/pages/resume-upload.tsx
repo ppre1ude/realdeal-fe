@@ -1,4 +1,6 @@
 import { useMemo, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { createResume, uploadResume, analyzeResume } from '../services/resume'
 import {
   AnalyzeButton,
   Content,
@@ -62,6 +64,7 @@ const isPdfFile = (file: File) => {
 }
 
 const ResumeUploadPage = () => {
+  const navigate = useNavigate()
   const [fullName, setFullName] = useState('')
   const [desiredRole, setDesiredRole] = useState('')
   const [email, setEmail] = useState('')
@@ -69,6 +72,8 @@ const ResumeUploadPage = () => {
   const [goal, setGoal] = useState('')
   const [experience, setExperience] = useState<string>('')
   const [file, setFile] = useState<File | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,6 +88,74 @@ const ResumeUploadPage = () => {
 
   const openFilePicker = () => {
     fileInputRef.current?.click()
+  }
+
+  const handleAnalyze = async () => {
+    console.log('🔵 handleAnalyze 함수 호출됨')
+    console.log('📋 입력 데이터:', {
+      fullName,
+      desiredRole,
+      email,
+      phone,
+      goal,
+      experience,
+    })
+    console.log('📄 파일:', file ? { name: file.name, size: file.size } : null)
+
+    if (!isBasicComplete || !file) {
+      setError('모든 필수 항목을 입력하고 이력서를 업로드해주세요.')
+      return
+    }
+
+    setError(null)
+    setIsLoading(true)
+
+    try {
+      // 1. 인적사항 정보를 이력서로 생성
+      const personalInfoContent = JSON.stringify({
+        fullName,
+        desiredRole,
+        email,
+        phone,
+        goal,
+        experience,
+      })
+
+      console.log('📤 1. 인적사항 전송 시작:', {
+        title: desiredRole || '이력서',
+        content: personalInfoContent,
+      })
+
+      await createResume({
+        title: desiredRole || '이력서',
+        content: personalInfoContent,
+      })
+
+      console.log('✅ 1. 인적사항 전송 완료')
+
+      // 2. 파일 업로드
+      console.log('📤 2. 파일 업로드 시작:', file.name, formatFileSize(file.size))
+      const uploadResponse = await uploadResume(file)
+      console.log('✅ 2. 파일 업로드 완료:', uploadResponse)
+
+      // 3. 이력서 분석 시작 (업로드된 이력서 ID 사용)
+      console.log('📤 3. 분석 시작:', uploadResponse.id)
+      const analyzeResponse = await analyzeResume(uploadResponse.id)
+      console.log('✅ 3. 분석 완료:', analyzeResponse)
+
+      // 4. 분석 결과 페이지로 이동
+      console.log('🔄 페이지 이동:', `/resume-report?id=${analyzeResponse.id}`)
+      navigate(`/resume-report?id=${analyzeResponse.id}`)
+    } catch (err) {
+      console.error('❌ 에러 발생:', err)
+      setError(
+        err instanceof Error
+          ? err.message
+          : '이력서 업로드에 실패했습니다. 다시 시도해주세요.'
+      )
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const isBasicComplete =
@@ -239,11 +312,20 @@ const ResumeUploadPage = () => {
                       </FileActionButton>
                     </FileCard>
                     <UploadActions>
-                      <AnalyzeButton type="button">
+                      <AnalyzeButton
+                        type="button"
+                        onClick={handleAnalyze}
+                        disabled={isLoading || !isBasicComplete || !file}
+                      >
                         <i className="fa-solid fa-wand-magic-sparkles" aria-hidden="true" />
-                        AI 분석 시작하기
+                        {isLoading ? '전송 중...' : 'AI 분석 시작하기'}
                       </AnalyzeButton>
                       <UploadHint>분석은 약 30초~1분 정도 소요됩니다.</UploadHint>
+                      {error && (
+                        <div style={{ color: '#ef4444', fontSize: '14px', marginTop: '8px' }}>
+                          {error}
+                        </div>
+                      )}
                     </UploadActions>
                   </UploadZone>
                 ) : (
