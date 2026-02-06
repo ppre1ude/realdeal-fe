@@ -238,6 +238,7 @@ export const Section = styled.section<{ $tone?: 'light' | 'muted' }>`
 
 export const SectionHeader = styled.div`
   text-align: center;
+<<<<<<< HEAD
   padding-top: 96px;
   padding-bottom: 64px;
   padding-left: 80px;
@@ -254,6 +255,9 @@ export const SectionHeader = styled.div`
     padding-left: 24px;
     padding-right: 24px;
   }
+=======
+  margin-bottom: 80px;
+>>>>>>> origin/feature/ju
 `
 
 export const SectionTitle = styled.h2`
@@ -804,6 +808,7 @@ export const FabButton = styled.button`
     transform: scale(1.1);
   }
 `
+<<<<<<< HEAD
 
 // Detailed Process Steps
 export const ProcessSection = styled.section`
@@ -989,3 +994,5 @@ export const StepImageContent = styled.img`
   height: 100%;
   object-fit: cover;
 `
+=======
+>>>>>>> origin/feature/ju

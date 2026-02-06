@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
             <LogoIcon>
               <i className="fa-solid fa-gem" aria-hidden="true" />
             </LogoIcon>
-            <LogoText>알짜배기</LogoText>
+            <LogoText>LINKED-INSA</LogoText>
           </Logo>
           <Nav>
             <NavLink to="/" $active>
