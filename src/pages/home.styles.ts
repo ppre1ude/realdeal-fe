@@ -76,17 +76,32 @@ export const HeaderLeft = styled.div`
   }
 `
 
-export const Logo = styled.div`
+export const Logo = styled(Link)`
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 900;
   color: #add94e;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+`
+
+export const LogoIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  background: #add94e;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(173, 217, 78, 0.2);
+  font-size: 20px;
 `
 
 export const LogoText = styled.span`
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 `
 
 export const Nav = styled.nav`

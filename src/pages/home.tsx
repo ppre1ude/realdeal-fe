@@ -17,20 +17,6 @@
   FeatureGrid,
   FeatureIcon,
   FeatureTitle,
-  Footer,
-  FooterBottom,
-  FooterBrand,
-  FooterBrandTitle,
-  FooterColumn,
-  FooterColumns,
-  FooterHeading,
-  FooterLink,
-  FooterList,
-  FooterText,
-  FooterTop,
-  Header,
-  HeaderActions,
-  HeaderLeft,
   HeroActions,
   HeroBadge,
   HeroContent,
@@ -42,8 +28,6 @@
   HeroVisual,
   HomeGlobalStyle,
   LightActionButton,
-  Logo,
-  LogoText,
   MatchBar,
   MatchBox,
   MatchFill,
@@ -52,9 +36,6 @@
   MatchingHeader,
   MatchingSubtitle,
   MatchingTitle,
-  Nav,
-  NavAnchor,
-  NavLink,
   OriginalText,
   Page,
   PanelBlock,
@@ -69,7 +50,6 @@
   PanelHeaderTitle,
   PanelStack,
   PanelSpacer,
-  PrimaryPillButton,
   ResumeIntro,
   ResumeLayout,
   ResumeText,
@@ -78,14 +58,11 @@
   SectionHeader,
   SectionSubtitle,
   SectionTitle,
-  SocialLink,
-  SocialLinks,
   StatusBadge,
   SuggestionBadge,
   SuggestionBox,
   Tag,
   TagRow,
-  TextLinkButton,
   UploadDropzone,
   UploadIcon,
   UploadSubtitle,
@@ -174,27 +151,6 @@ const HomePage = () => (
     <HomeGlobalStyle />
     <Page>
       <AppShell>
-        <Header>
-          <HeaderLeft>
-            <Logo>
-              <i className="fa-solid fa-bolt-lightning" aria-hidden="true" />
-              <LogoText>LINKED-INSA</LogoText>
-            </Logo>
-            <Nav>
-              <NavLink to="/home" $active>
-                홈
-              </NavLink>
-              <NavAnchor href="#">AI 이력서 첨삭</NavAnchor>
-              <NavAnchor href="#">기업 추천</NavAnchor>
-              <NavAnchor href="#">매칭 현황</NavAnchor>
-            </Nav>
-          </HeaderLeft>
-          <HeaderActions>
-            <TextLinkButton to="/login">로그인</TextLinkButton>
-            <PrimaryPillButton to="/register">무료 시작하기</PrimaryPillButton>
-          </HeaderActions>
-        </Header>
-
         <HeroSection>
           <HeroContent>
             <HeroBadge>신입 취준생 필수 플랫폼</HeroBadge>
@@ -346,82 +302,6 @@ const HomePage = () => (
             ))}
           </CompanyGrid>
         </Section>
-
-        <Footer>
-          <FooterTop>
-            <FooterBrand>
-              <FooterBrandTitle>
-                <i className="fa-solid fa-bolt-lightning" aria-hidden="true" />
-                LINKED-INSA
-              </FooterBrandTitle>
-              <FooterText>
-                취업 준비생들을 위한 AI 기반 이력서 최적화 및 기업 매칭 서비스. 당신의 꿈을 향한 가장
-                빠른 길을 제시합니다.
-              </FooterText>
-            </FooterBrand>
-            <FooterColumns>
-              <FooterColumn>
-                <FooterHeading>서비스</FooterHeading>
-                <FooterList>
-                  <li>
-                    <FooterLink href="#">AI 이력서 첨삭</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">기업 추천</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">매칭 프로세스</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">합격 수기</FooterLink>
-                  </li>
-                </FooterList>
-              </FooterColumn>
-              <FooterColumn>
-                <FooterHeading>고객지원</FooterHeading>
-                <FooterList>
-                  <li>
-                    <FooterLink href="#">자주 묻는 질문</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">공지사항</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">문의하기</FooterLink>
-                  </li>
-                </FooterList>
-              </FooterColumn>
-              <FooterColumn>
-                <FooterHeading>법적 고지</FooterHeading>
-                <FooterList>
-                  <li>
-                    <FooterLink href="#">이용약관</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">개인정보처리방침</FooterLink>
-                  </li>
-                  <li>
-                    <FooterLink href="#">운영정책</FooterLink>
-                  </li>
-                </FooterList>
-              </FooterColumn>
-            </FooterColumns>
-          </FooterTop>
-          <FooterBottom>
-            <span>© 2025 LINKED-INSA. All rights reserved.</span>
-            <SocialLinks>
-              <SocialLink href="#" aria-label="인스타그램">
-                <i className="fa-brands fa-instagram" aria-hidden="true" />
-              </SocialLink>
-              <SocialLink href="#" aria-label="유튜브">
-                <i className="fa-brands fa-youtube" aria-hidden="true" />
-              </SocialLink>
-              <SocialLink href="#" aria-label="링크드인">
-                <i className="fa-brands fa-linkedin" aria-hidden="true" />
-              </SocialLink>
-            </SocialLinks>
-          </FooterBottom>
-        </Footer>
 
         <Fab>
           <FabButton type="button" aria-label="문의하기">
