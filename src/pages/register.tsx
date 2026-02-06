@@ -18,7 +18,7 @@ import {
 const RegisterPage = () => (
   <AuthLayout>
     <PageContent>
-      <AuthCard title="회원가입" subtitle="새로운 계정을 만들어 보세요.">
+      <AuthCard title="회원가입" subtitle="새로운 계정을 만들어 보세요." offsetTop={64}>
         <Form>
           <FormField
             id="signup-name"
@@ -58,7 +58,7 @@ const RegisterPage = () => (
           <PrimaryButton type="submit">회원가입 완료</PrimaryButton>
         </Form>
         <Divider text="간편 가입" />
-        <SocialButton text="카카오톡으로 회원가입" />
+        <SocialButton text="카카오톡으로 회원가입" withBottomMargin />
         <BottomText>
           이미 계정이 있으신가요? <InlineLink to="/login">로그인</InlineLink>
         </BottomText>
