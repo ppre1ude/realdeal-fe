@@ -1,20 +1,13 @@
 ﻿import type { ReactNode } from 'react'
 import {
   AppFrame,
-  Brand,
-  BrandIcon,
-  BrandName,
-  ContactButton,
   Footer,
   FooterCopy,
   FooterLink,
   FooterLinks,
   FooterRow,
   GlobalStyle,
-  Header,
   Main,
-  Nav,
-  NavLink,
   Page,
 } from './AuthLayout.styles'
 
